@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<meta charset="utf-8">
+
+<title>Human Computer Interaction</title>
+
+<meta name="description" content="Lecture 05 for Ken Anderson's Spring 2015 Seminar on Data Engineering">
+<meta name="author" content="Ken Anderson">
+
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+<link rel="stylesheet" href="css/reveal.css">
+<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+<!-- Code syntax highlighting -->
+<link rel="stylesheet" href="lib/css/zenburn.css">
+
+<!-- Printing and PDF exports -->
+<script>
+var link = document.createElement( 'link' );
+link.rel = 'stylesheet';
+link.type = 'text/css';
+link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+document.getElementsByTagName( 'head' )[0].appendChild( link );
+</script>
+
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+
+	<style>
+	table {
+		border-collapse: collapse;
+	}
+
+	table, td, th {
+		border: 1px solid black;
+	}
+
+	ul {
+		font-size: 10px;
+	}
+
+	</style>
+
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+
+			<section>
+				<h2>Human Computer Interaction in Software Engineering</h2>
+				<h4>By: Cassiane Cladis and Elizabeth Lor</h4>
+				<p>CSCI 5828 - Presentation 3</p>
+			</section>
+
+			<section>
+				<h2>Index</h2>
+				<ul>
+					<li>I. History</li>
+					<li>II. What is HCI</li>
+					<li>III. HCI Design Approaches</li>
+					<li>IV. Impact of HCI on Society, the Economy and Culture</li>
+					<li>V. Why HCI Is Important</li>
+					<li>VI. Example</li>
+					<li>VII. Pros and Cons</li>
+					<li>VIII. Importance in Software Engineering</li>
+					<li>IX. The Great Divide</li>
+					<li>X. Additional Materials</li>
+					<li>XI. Citations</li>
+				</ul>
+			</section>
+
+			<section><h2>I. History</h2></section>
+
+			<section>
+				<h2>History</h2>
+				<ul>
+					<li>History shows that past computer makers were unaware and not focused on Human Computer Interaction (HCI)</li>
+					<ul>
+						<li>Made their product non human friendly</li>
+						<li>Made it hard to use</li>
+						<li>Limit the amount of people having access to a computer</li>
+						<li>Made it hard to understand and use/manage the computer</li>
+					</ul>
+					<li>HCI arose as a field from intertwined roots in:
+						<ul>
+							<li>Computer Graphics</li>
+							<li>Operating Systems</li>
+							<li>Human Factors</li>
+							<li>Ergonomics</li>
+							<li>Industrial Engineering</li>
+							<li>Cognitive Psychology</li>
+							<li>The systems part of computer science</li>
+						</ul>
+					</ul>
+				</section>
+
+				<section>
+					<h2>History Con't</h2>
+					<ul>
+						<li>Computer graphics were born from the use of Cathode-Ray Tube (CRT) and pen devices very early in the history of computers.</li>
+						<ul>
+							<li>This lead to the development of several HCI techniques.</il>
+							</ul>
+							<li>Out of this line of development came number of important building blocks for HCI such as: </li>
+							<ul>
+								<li>The mouse</li>
+								<li>Bitmapped displays</li>
+								<li>Personal computers</li>
+								<li>Windows</li>
+								<li>The desktop metaphor</li>
+								<li>Point and click editors</li>
+							</ul>
+						</ul>
+					</section>
+
+					<section>
+						<h2>History Con't</h2>
+						<ul>
+							<li>As computers became more affordable for use outside of the military and business there became a need for a more human-friendly design.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>HCI and WWII</h2>
+						<ul>
+							<li>Two computing legacies of WWII were the respect for the potential of computing (code-breaking) and interest in behavioral requirements for design.</li>
+							<li>Simple design flaws such as aircraft controls and escape hatches cause large aircraft losses and thousands of personnel casualties.</li>
+							<li>Aviation engineers, psychologists, and physicians formed the Aeromedical Engineering Association to discuss and examine the loss issues.</li>
+						</ul>
+					</section>
+
+					<section><p>{Highly Selective and Extremely Condensed}</p> <h2>History of Computer Interface and Interaction</h2></section>
+
+					<section>
+						<h2>Babbage Analytical Engine</h2>
+						<strong>(1822)</strong>
+						<ul>
+							<li>The Victorian Era concept was over a century ahead of it's time.</li>
+							<li>Would have been programmed by physically manipulating cams, clutches, cranks and gears.</li>
+							<center><img height="400" src="images/babbage.jpg"></center>
+						</ul>
+					</section>
+
+					<section>
+						<h2>ENIAC</h2>
+						<strong>The Giant Brain - (1922)</strong>
+						<ul>
+							<li>First electronic general purpose computer that was Turing-complete, digital, and capable of being reprogrammed to solve a "large class of numerical problems".</li>
+							<li>Originally designed to calculate artillery firing tables for the US Army.</li>
+							<li>Debugged by programmers crawling inside and finding bad tubes.</li>
+							<li>Interaction was limited to engineers and scientists manually running function tables and knobs.</li>
+							<center><img height="300" src="images/eniac.jpg"></center>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Punched Cards</h2>
+						<ul>
+							<li>Punched cards were first used in the 18<sup>th</sup> century to control automatic textile looms.</li>
+							<li>By the late 19<sup>th</sup> century, the cards were used for entering data into simple tabulating machines.</li>
+							<li>The advent of electronic computers in the 1950s led to IVM's punched cards becoming the primary means of entering data and commands into computers.</li>
+							<center><img height="300" src="images/punch_card.jpg"></center>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Light Pen</h2>
+						<strong>(1951)</strong>
+						<ul>
+							<li>Created at MIT, the pen is a light-sensitive stylus developed for use with glass-face vacuum tube CRT monitors.</li>
+							<li>The pen senses changes in brightness on the screen.</li>
+							<center><img height="400" src="images/light_pen.jpg"></center>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Trackball</h2>
+						<strong>(1952)</strong>
+						<ul>
+							<li>Originally developed for air traffic control and military systems, the trackball was adapted for computer use by MIT scientists in 1964.</li>
+							<li>The rotation of a small ball translates to movements like a cursor on the computer screen.</li>
+							<center><img height="400" src="images/trackball.jpg"></center>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Mouse</h2>
+						<strong>(1963)</strong>
+						<ul>
+							<li>Doug Engelbart and Bill English developed the first computer mouse at Stanford Research Institute.</li>
+							<li>Device was a block of wood with a single button and two gear-wheels positioned perpendicularly to each other.</li>
+							<li>In 1972, English and Jack Hawley replaced the two roller wheels with a metal ball bearing to track movement in any direction.</li>
+							<li>In 1980, the optical mouse was developed simultaneously by two different researchers.</li>
+							<li>Today's optical mice can work on any surface and use an LED or laser as a light source.</li>
+							<center><img height="250" src="images/mouse.jpg"></center>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Command Line Interface</h2>
+						<strong>(1960's)</strong>
+						<ul>
+							<li>Teletype keyboards were connected to early computers to allow users to input their commands.</li>
+							<li>CRTs were later used as display devices, but the interaction with the computer remained a text-only interaction.</li>
+							<center><img height="400" src="images/teletype_keyboard.jpg"></center>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Graphical User Interface</h2>
+						<strong>(1980's)</strong>
+						<ul>
+							<li>The Xerox Star 8010 was the first commercial computer system to come with a mouse, bitmapped, window-based graphical user interface (GUI) featuring icons and folders.</li>
+							<li>Originally these technologies were developed for an experimental system called Alto.</li>
+							<li>These workstation systems were intended for business use and were tens of thousands of dollars.</li>
+							<li>The Macintosh was the first consumer-level computer to include the advanced black-and-white GUI and a mouse.</li>
+							<center><img height="250" src="images/gui.jpg"></center>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Multitouch</h2>
+						<ul>
+							<li>The first transparent multitouch screen overlay was developed by Bob Boie at Bell Labs in 1984.</li>
+							<li>Using a conductive surface with a voltage applied across it and an array of touch sensors laid on top of a CRT display.</li>
+							<li>The human body's natural ability to hold and electrical charge causes a local build-up of charge when the surface is touched and the disturbance of the field can be determined.</li>
+							<center><img height="300" src="images/multitouch.jpg"></center>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Natural User Interface</h2>
+						<ul>
+							<li>The natural user interface (NUI) sense the user's body movement and voice commands rather than requiring the use of input devices such as a keyboard or touch screen.</li>
+							<center><img height="400" src="images/nui.jpg"></center>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Software Psychology</h2>
+						<ul>
+							<li>The goal was to establish the utility of a hevoiral approach to understanding software design, programming and the use of interactive systems, and to motivate and guide system developers to consider the characteristics human beings.</li>
+							<li>Inaugurated a variety of technical projects pertaining to usability of systems and software.</li>
+							<li>Assessing the relative complexity of syntactic constructions in programming languages.</li>
+						</ul>
+					</section>
+
+
+					<section><h2>II. What is HCI</h2></section>
+
+					<section>
+						<h2>What is HCI</h2>
+						<ul>
+							<li>HCI is the study of how people interact with computers and to what extent computer are or are not developed for successful interactions with human beings.</li>
+							<li>A user interface is how human interacts with a computer.</li>
+							<li>BUT, HCI goes beyond designing screens and menus</li>
+							<ul>
+								<li>They make it easier to use</li>
+								<li>Study the <font color="red">reasoning</font> behind building specific functionality into computers and the long term effects that systems will have on humans.</li>
+							</ul>
+						</ul>
+					</section>
+
+					<section>
+						<h2>What is HCI Con't</h2>
+						<ul>
+							<li>It's a very broad discipline that encompasses different specialties with different concerns regarding computer developers.</li>
+							<ul>
+								<li><strong>Computer Science:</strong> concerns with the application design and engineering of the human interfaces</li>
+								<li><strong>Sociology and Anthropology:</strong> concerns with the interactions between technology, work and organization and the way that human systems and technical systems mutually adapt to each other</li>
+								<li><strong>Ergonomics:</strong> concerned with the safety of computer systems and the safe limits of human cognition and sensation</li>
+								<li><strong>Psychology:</strong> concerned with the cognitive processes of humans and the behavior of users</li>
+								<li><strong>Linguistics:</strong> concerned with the development of human and machine languages and the relationship between the two</li>
+							</ul>
+						</ul>
+					</section>
+
+					<section>
+						<h2>What Is HCI Con't</h2>
+						<ul>
+							<li><i>As computers become more and pervasive in culture, designers are increasingly looking to ways to make interfacing with devices easier, safer and more efficient.</i></li>
+							<li>Computer users today would argue that computer makers are still not paying enough attention to making their product "user-friendly".</li>
+							<li>Computer system developers might argue that computers are extremely complex products to design and make.</li>
+							<ul>
+								<li>The demand for the services that computers can provide has always outdriven the demand for ease of use.</li>
+							</ul>
+						</ul>
+					</section>
+
+					<section><h2>III. HCI Design Approaches</h2></section>
+
+					<section>
+						<h2>HCI Design Approaches</h2>
+						<ul>
+							<li>Eberts describes four HCI design approaches that may be applied to UI designs to develop user friendly, efficient, and intuitive user experiences for humans.</li>
+							<li>The four approaches are:</li>
+							<ul>
+								<li>Anthropomorphic Approach</li>
+								<li>Cognitive Approach</li>
+								<li>Empirical Approach</li>
+								<li>Predictive Modeling Approach</li>
+							</ul>
+							<li>One or more of these approaches may be used in a single UI design.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Anthropomorphic Approach</h2>
+						<ul>
+							<li>This approach involves designing a user interface to posses human like qualities.</li>
+							<ul>
+								<li>Example: an interface may be designed to communicate with users in a human to human manner, as if the computer empathizes with the user</li>
+								<ul>
+									<li>The interface error message is written in a way that human can understand.</li>
+									<li>"We're sorry, but that page cannot be found"</li>
+								</ul>
+							</ul>
+							<li>Human affordances are perceivable potential actions that a person can do with an object.</li>
+							<ul>
+								<li>Example: pleasant sounds are used to indicate when a task has been completed</li>
+								<ul>
+									<li>This signals that the user may continue with the next step in a process.</li>
+								</ul>
+							</ul>
+							<li>Constraints complement affordance by indicating the limitations of user actions.</li>
+							<ul>
+								<li>Example: a grayed out menu option and an unpleasant sound indicate that the user can't carry out a particular action</li>
+							</ul>
+							<li>Affordance and constraints can be designed to non-verbally guide user behaviors through an interface and prevent user errors in a complex interface.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Cognitive Approach</h2>
+						<ul>
+							<li>This approach considers the abilities of the human brain and sensory perception in order to develop a user interface that will support the end user.</li>
+							<li>Using metaphors can be an effective way to communicate an abstract concept or procedure to users, as long as the metaphor is used accurately.</li>
+							<li>Metaphors rely on a user's familiarity with another concept, as well as human affordances to help users understand the actions they can perform with their data based on the form it takes.</li>
+							<ul>
+								<li>Example: user can move a file or folder into the "trashcan" to delete it</li>
+							</ul>
+							<li>Benefit of using metaphors in design is that users who can relate to the metaphors are able to learn to use a new system very quickly.</li>
+							<ul>
+								<li>Example: Mac computers use the icon of a trashcan on the desktop while PCs have a recycle bin</li>
+								<ul>
+									<li>The recycle bin does not actually "recycle" the data.</li>
+									<li>Instead, it behaves like the Mac trash can and used to permanently delete files.</li>
+								</ul>
+							</ul>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Cognitive Approach Con't</h2>
+						<ul>
+							<li>It's also important to consider the user's attention span, which may be based on the environment of use and the perceived metal workload involved in completing a task.</li>
+							<li>Typically, users can focus well on one task at a time.</li>
+							<ul>
+								<li>Example: designing a web based form to collect information from a user</li>
+								<ul>
+									<li>The form may be divided into "Contact Information" and "Billing Information", rather than mixing the two and confusing the users.</li>
+								</ul>
+							</ul>
+							<li>By "chunking" this data into individual sections or even separate pages, the perceived workload can be reduced.</li>
+							<li>User may become overwhelmed by the amount of work that needs to be done to complete the form if there was one single form that requires the user to scroll the page in order to complete it.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Empirical Approach</h2>
+						<ul>
+							<li>This approach is useful for examining and comparing the usability of multiple conceptual designs.</li>
+							<li>Often, users will appreciate specific elements of each design concept, which may lead to the development of a composite conceptual design to test.</li>
+							<li>Measuring a user's task performance is important for determining how intuitive and user friendly a web page is.</li>
+							<li>A researcher who is familiar with the tasks the web page has been designed to support will develop a set of test tasks that related to the task goals associated with the page.</li>
+							<li>If two or three design concepts were rated highly during user testing, it may be advantageous to conduct an A/B Test during post production.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Predictive Modeling Approach</h2>
+						<ul>
+							<li>Goals, Operators, Methods and Section Rules (GOMS) is a method for examining the individual components of a user experience in terms of the time it takes a user to most efficiently complete a goal.</li>
+							<li><strong>Goals</strong> are defined as what the user desires to accomplish on the website.</li>
+							<li><strong>Operators</strong> are the atomic level actions that the user performs to reach a goal.</li>
+							<li><strong>Methods</strong> are procedures that include a series of operators and sub-goals that the user employs to accomplish a goal.</li>
+							<li><strong>Section Rules</strong> refer to a user's personal decision about which method will work best in a particular situation in order to reach a goal.</li>
+						</ul>
+					</section>
+
+					<section><h2>IV. Impact of HCI on Society, the Economy and Culture</h2></section>
+
+					<section>
+						<h2>Society</h2>
+						<ul>
+							<li>The main impact that HCI has had on society is improving the ease of use of computers and other devices.</li>
+							<li>HCI designers and developers makes and improve computers, tablets and mobile phones.</li>
+							<li>Modern electronics do not require the user to have much training in order to control the functions of the computers.</li>
+							<ul>
+								<li>Whereas past generation, users has to use command line interfaces</li>
+								<center><img height="300" src="images/commandline.png"></center>
+							</ul>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Society Con't</h2>
+						<ul>
+							<li>User Interface (UI) designers try to ensure that the input and output processes are as simple and easy for the user as possible.</li>
+							<li>Example: touch screen technology</li>
+							<ul>
+								<li>It has become very popular in portable devices like mobile phones and tablets.</li>
+								<li>These developments are designed to move towards making electronics devices more friendly to users.</li>
+								<ul>
+									<li>Specifically, people who are not experienced with devices like this and usually find them too complicated to use.</li>
+								</ul>
+								<li>These developments are designed to make these devices more accessible for these people and to increase the amount of people that are able to use these products.</li>
+							</ul>
+							<center><img height="200" src="images/touchscreen.jpg"></center>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Society Con't</h2>
+						<ul>
+							<li>There have also been developments designed to help people with disabilities or impairments to use electronic devices.</li>
+							<li>Text to speech technology on computers and audio descriptions on televisions exist for people who have sight problems.</li>
+							<li>Developments have also been made for military applications.</li>
+							<li>Remote control drones can now be used for reconnaissance, search and destroy or searching collapsed buildings.</li>
+							<li>This is a much safer way to go about these missions than sending in real people.</li>
+							<center><img height="200" src="images/speech.jpg"> <img height="200" src="images/drone.jpg"></center>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Economy</h2>
+						<ul>
+							<li>HCI impacted the economy by improving peoples productivity in the work place.</li>
+							<li>It has increased people's productivity massively.</li>
+							<li>Improvement of robotics</li>
+							<ul>
+								<li>Allow manufacturers to have full robotic operated factories that carry out manual labor for free, fast and efficiently.</li>
+								<li>Factory machines are in many ways easier to use than human workers on production lines for things like car.</li>
+							</ul>
+							<center><img height="300" src="images/carmachine.jpg"></center>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Economy Con't</h2>
+						<ul>
+							<li>Communication between companies are easily transferable and exchanged through the internet.</li>
+							<ul>
+								<li>The distribution of documents and other files has become much easier thanks to technologies like email and text messages.</li>
+								<li>Smartphone technology takes this further since documents can be edited and sent while the user is on the go.</li>
+								<center><img height="350" src="images/dropbox.png"></center>
+							</ul>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Economy Con't</h2>
+						<ul>
+							<li>Many companies have now set up E-Commerce websites which allow them to sell their items online.</li>
+							<ul>
+								<li>This has many advantages over a regular retail store.</li>
+								<li>Users can simply visit the website, browse the products available and purchase whatever they want.</li>
+							</ul>
+							<center><img height="250" src="images/amazon.png"></center>
+							<li>Many types of input can be sped up with HCI development.</li>
+							<ul>
+								<li>Things like barcodes need to be read faster for more efficient operation in shop.</li>
+								<li>Without this kind of speed, much more time would be spent at the checkout of a store.</li>
+							</ul>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Culture</h2>
+						<ul>
+							<li>HCI impacted the culture by taking down the language barrier.</li>
+							<li>It's helpful for having a conversation with someone from a different tongue.</li>
+							<li>It helps companies communicate to other international when making business deals or checking on reports and manufacturing.</li>
+							<center><img height="300" src="images/reports.jpg"></center>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Culture Con't</h2>
+						<ul>
+							<li>Moore's Law states that computer power will double every two years.</li>
+							<ul>
+								<li>This means that the amount of tasks that electronic devices will become more varied and complex as time goes on.</li>
+								<li>They will continue to become more and more integrated into our lives.</li>
+							</ul>
+							<li>People no longer have to wash clothes with their hands since machines such as washing machines are available.</li>
+							<li>Younger children exposed to a lot of technology does not play a lot with toys that older generation used to.</li>
+							<li>Hard books are being taken over by electronic version that will never damage the book.</li>
+							<center><img height="250" src="images/kidstechnology.jpg"></center>
+						</ul>
+					</section>
+
+					<section><h2>V. Why HCI is Important</h2></section>
+
+					<section>
+						<h2>Pervasive Computing</h2>
+						<ul>
+							<li>In the early days of computing only highly trained specialists could use computers</li>
+							<li>Computers were massive expensive machines only found in industry and research.</li>
+							<li>Today computers are everywhere (including personal devices) so making clear intuitive systems which will be usable for people with a varied range of abilities and expertise plus not completed any formal training.</li>
+							<li>As software and computing are expected to make daily life more efficient the interfaces likewise need to be more usable and efficient.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Everyday Knowledge</h2>
+						<ul>
+							<li>HCI takes advantage of everyday knowledge of the world to make software more understandable and usable.</li>
+							<li>Example: Using a graphic of a miniature folder in a computer's interface helps the user understand the purpose of the folder as almost everyone has experience with paper folders.</li>
+							<li>*However this is becoming less true as the world gets more digitized but the icon is a method for organization.*</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Daily Life</h2>
+						<ul>
+							<li>Computers permeate almost every aspect of our daily life even without just cell phones or computers.</li>
+							<li>ATMs, train ticket vending machines, checkout lanes are just a few examples of computer interfaces a person can come into contact with daily.</li>
+							<li>HCI principles are consulted and considered to ensure the creation of a safe, usable, and efficient interface for the software.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Business and Industry</h2>
+						<ul>
+							<li>HCI is an especially important consideration for any business that uses computers in their everyday operations.</li>
+							<li>Well designed usable systems ensure that staff are not frustrated during their work and as a result are more content and productive.</li>
+							<li>HCI is especially important in the design of safety critical systems.</li>
+							<ul>
+								<li>Especially those found in power plants or air traffic control centers.</li>
+								<li>Design errors in these situations can have serious results including death.</li>
+							</ul>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Accessibility</h2>
+						<ul>
+							<li>HCI is a key consideration when designing systems that are not only usable, but also accessible for people with disabilities.</li>
+							<li>The core philosophy of HCI is to provide safe, usable, and efficient systems to everyone and this includes those with different sets of abilities and different ranges of expertise and knowledge.</li>
+							<li>As software engineers work to make sure that software works on a variety of devices, HCI specialists need to ensure the interface is compatible as well.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Software Success</h2>
+						<ul>
+							<li>Good use of HCI principles and techniques is not only important for the end user, but also is a very high priority for software development companies.</li>
+							<li>If a software product is unusable and causes frustration, no person will use the program by choice and as a result sales will be negatively affected.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Untrained Users</h2>
+						<ul>
+							<li>Today very few computer users actually read the users manual accompanying the software.</li>
+							<ul>
+								<li>Only very specialized and advanced programs require training and extensive manuals.</li>
+							</ul>
+							<li>Computer users expect to understand the main functionality of an average program within a few minutes of interacting with it.</li>
+							<li>HCI provides designers with the principles, techniques, and tools necessary to design effective interfaces that are obvious and easy to use, and do not require training.</li>
+						</ul>
+					</section>
+
+					<section><h2>VI. Example</h2></section>
+
+					<section>
+						<h2>Example</h2>
+						<ul>
+							<li>Developing a prototype of an interface that is evaluated and then rebuilt and reassessed iteratively until the final interface has been designed.</li>
+							<li>The user is seen as being integral to this process.</li>
+							<li>Many issues are highly debated such as:</li>
+							<ul>
+								<li>Methods that are most effective or economical, the point at which these methods should be applied or the value of prescribing a methodology at all.</li>
+							</ul>
+							<li>There are three major design approaches within HCI:</li>
+							<ul>
+								<li>User centered design</li>
+								<li>Cognitive modeling</li>
+								<li>Participatory design</li>
+							</ul>
+							<li>Interaction between users and computers occurs at the user interface, which includes both software and hardware.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Example Con't</h2>
+						<center><img height="500" src="images/Example1.png"></center>
+					</section>
+
+					<section>
+						<h2>Example Con't</h2>
+						<ul>
+							<li>The previous figure shows how the humans interact with the computers.</li>
+							<li>From the computer science perspective, the focus is on the interaction and specifically on the interaction between one or more humans and one or more computational machines.</li>
+							<li>The classical situation that comes to mind is a person using an interactive graphics program on a workstation.</li>
+							<li>Because HCI studies human and a machine in communication, it draws from supporting knowledge on both the machine and the human side.</li>
+							<li>On the machine side, techniques in computer graphics, operating systems, programming languages and development environments are relevant.</li>
+							<li>On the human side, communication theory, graphic and industrial design disciplines, linguistics, social science, cognitive psychology and human performance are relevant.</li>
+							<li>Of course, engineering and design methods are relevant.</li>
+						</ul>
+					</section>
+
+					<section><h2>VII. Pros and Cons</h2></section>
+
+					<section>
+						<h2>Pros</h2>
+						<ul>
+							<li>Affect the usability of products and make them easier to use.</li>
+							<li>Help the economy</li>
+							<ul>
+								<li>Example: companies using voice input to direct the caller to a representative</li>
+								<li>Save time and money</li>
+							</ul>
+							<li>Help the culture</li>
+							<ul>
+								<li>Example: household appliances change how culture work and live</li>
+								<li>Simple idea of adding wheels to the vacuum cleaner makes it easier to use</li>
+							</ul>
+							<li>Easier to communicate with people via the internet</li>
+							<ul>
+								<li>Reduce the need to talk face to face</li>
+							</ul>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Cons</h2>
+						<ul>
+							<li>Youngster using and learning from touch screen will prevent them to understand how to operate a physical keyboard effectively.</li>
+							<ul>
+								<li>They will feel lost when trying to use a computer in the workspace.</li>
+							</ul>
+							<li>With voice command, it will limit the user the ability to find information themselves.</li>
+							<ul>
+								<li>They will become dependent on technology to do their thinking and other tasks for them.</li>
+							</ul>
+							<li>It can limit people's creativity and thinking process.</li>
+							<li>Not being able to talk face to face leads to the loss of professionalism.</li>
+						</ul>
+					</section>
+
+					<section><h2>VIII. Importance in Software Engineering</h2></section>
+
+					<section>
+						<h2>Importance in Software Engineering</h2>
+						<ul>
+							<li>Software engineering must work together with HCI to produce a product.</li>
+							<ul>
+								<li>The methodologies should reveal the relevant points of contact between the disciplines.</li>
+							</ul>
+							<li>Methodologies produced by the two disciplines vary greatly in their effectiveness in providing direction for combining methods (or techniques) from both disciplines.</li>
+							<li>HCI is seen as useful for the development of the software requirements.</li>
+							<li>Software Engineering is a multi-perspective group focusing on a single problem: How to help develop software that is effective and accurate.</li>
+							<ul>
+								<li>HCI will help developers understand what is effective and accurate.</li>
+							</ul>
+							<li>Interaction with human beings is increasingly recognized and promoted as an important aspect of software systems and products.</li>
+							<li>More and more professionals in the computing industry calls for integrating HCI engineering with software engineering.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Importance in Software Engineering Con't</h2>
+						<center><img height="400" src="images/HCI_vs_SE.gif"></center>
+					</section>
+
+					<section><h2>IX. The Great Divide</h2></section>	
+					<section>
+						<h2>The Great Divide</h2>
+						<ul>
+							<li>Two roles assigned to software psychologists were problematic and resulted in a division of labor.</li>
+							<ul>
+								<li>Researchers were mainly in universities and developed general descriptions of users and graded them as general principles.</li>
+								<li>Human-factors specialists in industry tried to apply these guidelines in specific projects.</li>
+							</ul>
+							<li>This approach created unrepresentative situations and researchers created outrageous contrasts and psychologists grew frustrated trying to get the industry to use their guidelines.</li>	
+						</ul>
+					</section>
+
+					<section>
+						<h2>The Great Divide Con't</h2>
+						<ul>
+							<li>Origins of HCI in software psychology posed two central problems:</li>
+							<ul>
+								<li>To better describe design and development work and to understand how it could better be supported</li>
+								<li>To better specify the role that psychology - particularly social and behavioral science should play in HCI</li>
+							</ul>
+						</ul>
+					</section>
+
+					<section>
+						<h2>The Great Divide Con't</h2>
+							<ul>
+								<li>There are clear persisting and systemic challenges in terms of transferring human-computer interaction suggesting practices to software engineering (SE) processes.</li>
+								<li>Numerous gaps, ranging from differing disciplinary backgrounds through to software engineering modeling techniques have been found.</li>
+								<li>The achievement of useable software production by the software development industry has been problematic partly because of the complexities of using some HCI techniques and methods and partly because most software development companies are intransigent to suggested practices on usability, and human-centered design.</li>
+							</ul>
+					</section>
+
+					<section>
+						<h2>The Great Divide Con't</h2>
+							<ul>
+								<li>Issues such as organizational culture, context of application, user involvement, software engineering modeling techniques, and incorporation of usability evaluation into agile software development practice pose issues for HCI and SE.</li>
+								<ul><li>Prototypes pose a problem between SE and HCI specialists as they require a leap between abstract.</li></ul>
+								<li>There are considerable commonalities and major asymmetries.</li>
+								<li>The two can fit together, but only if assumptions are made about the content of requirements, design, and testing.</li>
+							</ul>
+					</section>
+
+					<section><h2>X. Additional Materials</h2></section>
+
+					<section>
+						<h2>Additional Materials</h2>
+						<ul>
+							<li><a href="http://hcc.colorado.edu/courses/" target="_blank">CU Boulder Courses about HCI</a></li>
+							<ul>
+								<li>Courses are offered at CU Boulder for those who are interested in taking courses dealing with HCI.</li> 
+							</ul>
+							<li><a href="http://chi2016.acm.org/wp/" target="_blank">ACM Conference on Human Factors in Computing Systems (CHI)</a></li>
+							<ul>
+								<li>A series of academic conferences</li> 
+								<li>Considered the most prestigious in the field of human computer interaction</li>
+								<li>Held annually in spring each year</li>
+							</ul>
+						</ul>
+					</section>
+
+					<section><h2>XI. Citations</h2></section>
+
+					<section>
+						<h2>Citations</h2>
+						<ul>
+							<li>Rouse, Margaret. "HCI (human-computer Interaction) Definition." SearchSoftwareQuality. TechTarget, 1 Sept. 2005. Web. 13 Nov. 2015. "http://searchsoftwarequality.techtarget.com/definition/HCI-human-computer-interaction".</li>
+							<li>Beal, Vangie. "HCI - Human-computer Interaction." Webopedia. QuinStreet. Web. 13 Nov. 2015. "http://www.webopedia.com/TERM/H/HCI.html".</li>
+							<li>Brown, Judy. "Exploring Human-Computer Interaction and Software Engineering Methodologies for the Creation of Interactive Software." SIGCHI Bullentin. 1997. Web. 13 Nov. 2015. "http://bulletin.sigchi.org/1997/january/workshop/brown/".</li>
+							<li>Shorabh, Dimna. "Human Computer Interaction : Pros and Cons." Web. 13 Nov. 2015. "http://www.smsvaranasi.com/insight/human_computer_interaction_pros_and_cons.pdf".</li>
+							<li>Camacho, Jefferson. "Impact of HCI on Society,The Economy And Culture." Prezi.com. 3 Feb. 2014. Web. 13 Nov. 2015. "https://prezi.com/8kdud-pwhz4s/impact-of-hci-on-societythe-economy-and-culture/".</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Citations Con't</h2>
+						<ul>
+							<li>McGown, Oliver. "Impact of HCI on Society, Culture and the Economy." HCI Blog. 29 Jan. 2013. Web. 13 Nov. 2015. "https://olivermcgownhci.wordpress.com/2013/01/29/impact-of-hci-on-society-culture-and-the-economy/".</li>
+							<li>Biue, Elizabeth, and Antonio Vallone. "Integrating HCI Engineering and Software Engineering: A Call to a Larger Vision." Integrating HCI Engineering and Software Engineering: A Call to a Larger Vision. Computer Sciences Corporation, 1 Aug. 1997. Web. 13 Nov. 2015. "http://luminanze.com/writings/larger_vision.html".</li>
+							<li>"HCI Design Approaches." Usability First. Web. 13 Nov. 2015. "http://www.usabilityfirst.com/usability-methods/hci-design-approaches/".</li>
+							<li>Tate, Karl. "How the Human/Computer Interface Works (Infographics)." LiveScience. TechMedia Network, 5 July 2013. Web. 15 Nov. 2015. "http://www.livescience.com/37944-how-the-human-computer-interface-works-infographics.html".</li>
+						</ul>
+					</section>
+				</div>
+			</div>
+
+			<script src="lib/js/head.min.js"></script>
+			<script src="js/reveal.js"></script>
+
+			<script>
+
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			// Optional reveal.js plugins
+			dependencies: [
+			{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+			{ src: 'plugin/zoom-js/zoom.js', async: true },
+			{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
+
+		</script>
+
+	</body>
+	</html>
